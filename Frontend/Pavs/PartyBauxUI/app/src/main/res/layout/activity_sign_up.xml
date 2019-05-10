@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout"
+    android:background="@drawable/background_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/status_bar_height"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:id="@+id/container_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="bottom">
+
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:id="@+id/textview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="52sp"
+                font:custom_font="@string/font_fancy" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/padding_xlarge"
+            android:layout_marginStart="@dimen/padding_xlarge"
+            android:layout_weight="3"
+            android:gravity="bottom"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="14sp"
+                font:custom_font="@string/font_primary" />
+
+            <HowdyIO.PartybAUX.Views.CustomEditText
+                android:id="@+id/edittext_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:drawablePadding="@dimen/padding_large"
+                android:drawableStart="@drawable/baseline_perm_contact_calendar_black_24"
+                android:drawableTint="@color/colorAccent"
+                android:hint="Email"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/edittext_username"
+                android:singleLine="true"
+                font:custom_font="@string/font_primary" />
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:id="@+id/textview_error_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Please enter a valid email"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:textColor="@color/thatsBadRed"
+                font:custom_font="@string/font_primary_bold"
+                android:visibility="gone"/>
+
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_large"
+                android:text="Username"
+                android:textSize="14sp"
+                font:custom_font="@string/font_primary" />
+            <HowdyIO.PartybAUX.Views.CustomEditText
+                android:id="@+id/edittext_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:drawablePadding="@dimen/padding_large"
+                android:drawableStart="@drawable/baseline_perm_contact_calendar_black_24"
+                android:drawableTint="@color/colorAccent"
+                android:hint="Username"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/edittext_password"
+                android:singleLine="true"
+                font:custom_font="@string/font_primary" />
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:id="@+id/textview_error_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Username already in use"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:textColor="@color/thatsBadRed"
+                font:custom_font="@string/font_primary_bold"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/padding_xlarge"
+            android:layout_marginStart="@dimen/padding_xlarge"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter a nice password"
+                android:textSize="14sp"
+                font:custom_font="@string/font_primary" />
+
+            <HowdyIO.PartybAUX.Views.CustomEditText
+                android:id="@+id/edittext_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:drawablePadding="@dimen/padding_large"
+                android:drawableStart="@drawable/baseline_lock_open_black_24"
+                android:drawableTint="@color/colorAccent"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/edittext_password_match"
+                android:singleLine="true"
+                font:custom_font="@string/font_primary" />
+
+            <HowdyIO.PartybAUX.Views.CustomEditText
+                android:id="@+id/edittext_password_match"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:backgroundTint="@color/colorAccent"
+                android:drawablePadding="@dimen/padding_large"
+                android:drawableStart="@drawable/baseline_lock_open_black_24"
+                android:drawableTint="@color/colorAccent"
+                android:hint="Confirm your password"
+                android:inputType="textPassword"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/button_sign_up"
+                android:singleLine="true"
+                font:custom_font="@string/font_primary" />
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:id="@+id/textview_error_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Passwords do not match"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:textColor="@color/thatsBadRed"
+                font:custom_font="@string/font_primary_bold"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:layout_marginEnd="@dimen/padding_xlarge"
+            android:layout_marginStart="@dimen/padding_xlarge"
+            android:layout_weight="2"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/button_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_size_small"
+                font:cardBackgroundColor="@color/card_background"
+                font:cardCornerRadius="6dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_green_button">
+
+                </FrameLayout>
+
+                <HowdyIO.PartybAUX.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Sign Up"
+                    android:textSize="20sp"
+                    font:custom_font="@string/font_primary" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

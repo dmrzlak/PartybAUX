@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'partybaux'
+            keyPassword 'partypartybauxbaux'
+            storeFile file('C:/Users/Chris/Desktop/Chris/Git/309_team/team_43/Experiments/Pavs/PartyBauxUI/app/partypartybauxbaux/partybox_keystore.jks')
+            storePassword 'partypartybauxbaux'
+        }
+    }
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "HowdyIO.ParybAUX"
+        minSdkVersion 23
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:animated-vector-drawable:27.1.1'
+    implementation 'com.android.support:exifinterface:27.1.1'
+    implementation 'com.android.support:customtabs:27.1.1'
+    implementation 'me.everything:overscroll-decor-android:1.0.4'
+    implementation project(':spotify-sdk')
+    implementation 'com.spotify.android:auth:1.0.0-alpha'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.kaaes:spotify-web-api-android:0.4.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.github.HenriqueRocha:android-colorthief:master'
+    implementation( 'com.github.thekhaeng:pushdown-anim-click:1.1.1' ){
+        exclude group: 'com.android.support'
+    }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="font_styleable" format="string">
+        <attr name="custom_font" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView" parent="font_styleable">
+        <attr name="custom_font"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText" parent="font_styleable">
+        <attr name="custom_font"/>
+    </declare-styleable>
+
+    <!-- layout types -->
+    <attr name="type">
+        <enum name="details" value="1" />
+        <enum name="player" value="2" />
+    </attr>
+
+    <declare-styleable name="SongDetailView">
+        <attr name="type"/>
+    </declare-styleable>
+
+    <declare-styleable name="UIButton">
+        <attr name="buttonColor" format="string"/>
+        <attr name="title" format="string"/>
+        <attr name="rightIcon" format="reference"/>
+    </declare-styleable>
+</resources>

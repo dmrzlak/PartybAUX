@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#303030</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#710bbf</color>
+    <color name="colorAccentDark">#440773</color>
+    <!--<color name="colorAccentDark">#620aa6</color>-->
+    <color name="goodPurp">#800dd8</color>
+    <color name="spotGreen">#1ed660</color>
+    <color name="spotGreenDark">#17a34a</color>
+    <color name="spotGreenDarkest">#107033</color>
+
+    <color name="thatsGoodGreen">#00e500</color>
+    <color name="thatsBadRed">#cc2929</color>
+    <color name="thatsBadRedDark">#991f1f</color>
+    <color name="thatsBadRedDarkest">#661414</color>
+
+    <color name="black">#181818</color>
+    <color name="background">#212121</color>
+    <color name="card_background">#424242</color>
+    <color name="light_gray">#96dcdcdc</color>
+    <color name="white">#fff</color>
+    <color name="cream">#c2c2c2</color>
+    <color name="light_cream">#dadada</color>
+
+    <color name="textColor_first">#c2c2c2</color>
+    <color name="textColor_second">#96cacaca</color>
+
+    <color name="semitransparent_black">#a0181818</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="background_material_light">#ffffff</color>
+</resources>

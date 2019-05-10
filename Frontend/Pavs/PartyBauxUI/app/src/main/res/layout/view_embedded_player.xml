@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_size_xxlarge"
+    android:layout_gravity="bottom"
+    android:background="@drawable/background_gradient"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/background_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        android:alpha="0"/>
+
+    <RelativeLayout
+        android:id="@+id/container_song_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_size_small"
+        android:background="@color/transparent"
+        android:elevation="2dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"/>
+        <RelativeLayout
+            android:id="@+id/wrapper_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/wrapper_button_add"
+            android:clickable="true"
+            android:focusable="true">
+            <ScrollView
+                android:id="@+id/scrollview_track_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scrollbars="horizontal"
+                android:fillViewport="true"
+                android:clickable="false"
+                android:focusable="false">
+                <HowdyIO.PartybAUX.Views.CustomTextView
+                    android:id="@+id/textview_track_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start"
+                    android:layout_marginStart="@dimen/padding_medium"
+                    android:layout_marginEnd="@dimen/padding_medium"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:scrollbars="none"
+
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    app:custom_font="@string/font_primary"/>
+            </ScrollView>
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/wrapper_button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_size_xsmall"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/padding_medium"
+            app:cardBackgroundColor="@color/goodPurp"
+            app:cardCornerRadius="@dimen/default_rounded_corner"
+            app:contentPadding="1dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:cardCornerRadius="@dimen/default_rounded_corner"
+                app:cardElevation="0dp"
+                app:contentPadding="1dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_grey_button" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <HowdyIO.PartybAUX.Views.CustomTextView
+                    android:id="@+id/textview_positive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/padding_medium"
+                    android:text="Add Track"
+                    app:custom_font="@string/font_primary" />
+
+                <View
+                    android:layout_width="@dimen/padding_medium"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container_song_title"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:layout_marginEnd="@dimen/padding_medium"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:id="@+id/textview_seekbar_start"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0:00"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_size_small"
+            android:layout_weight="8"
+            android:progress="0"
+            android:progressTint="@color/white"
+            android:thumbTint="@color/white" />
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:id="@+id/textview_seekbar_end"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/container_song_player"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_size_large"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/item_size_medium"
+        android:layout_marginStart="@dimen/item_size_medium"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/wrapper_button_play"
+            android:layout_width="@dimen/item_size_small"
+            android:layout_height="@dimen/item_size_small"
+            android:layout_centerInParent="true"
+            android:alpha="1"
+            android:clickable="false"
+            android:focusable="false"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="12dp"
+            app:contentPadding="2dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/default_rounded_corner"
+                app:cardElevation="0dp"
+                app:contentPadding="1dp" />
+
+            <ImageView
+                android:id="@+id/imageview_play_button"
+                android:layout_width="@dimen/item_size_small"
+                android:layout_height="@dimen/item_size_small"
+                android:layout_gravity="center"
+                android:background="@drawable/baseline_play_arrow_black_48"
+                android:backgroundTint="@color/white" />
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/wrapper_button_skip"
+            android:layout_width="@dimen/item_size_medium"
+            android:layout_height="@dimen/item_size_medium"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:alpha="1"
+            android:clickable="false"
+            android:focusable="false">
+
+
+            <ImageView
+                android:id="@+id/imageview_skip_button"
+                android:layout_width="@dimen/item_size_xsmall"
+                android:layout_height="@dimen/item_size_xsmall"
+                android:layout_centerInParent="true"
+                android:background="@drawable/baseline_skip_next_black_48"
+                android:backgroundTint="@color/white" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

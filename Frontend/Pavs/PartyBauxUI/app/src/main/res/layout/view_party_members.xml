@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/semitransparent_black" />
+
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:layout_width="@dimen/item_size_phat"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/colorPrimary">
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Party Members"
+                android:textSize="@dimen/text_size_shmedium"
+                android:paddingStart="@dimen/padding_large"
+                android:paddingBottom="@dimen/padding_medium"
+                android:layout_gravity="bottom"
+                app:custom_font="@string/font_primary"/>
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:paddingTop="@dimen/padding_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</RelativeLayout>

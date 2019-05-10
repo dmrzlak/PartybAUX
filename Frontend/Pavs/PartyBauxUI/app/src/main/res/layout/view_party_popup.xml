@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/semitransparent_black"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/default_rounded_corner">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/popup_container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="@dimen/item_size_xsmall"
+        android:layout_marginStart="@dimen/item_size_xsmall"
+        android:layout_marginTop="125dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/light_gray"
+        app:cardCornerRadius="@dimen/default_rounded_corner"
+        app:contentPadding="1dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="@dimen/default_rounded_corner"
+            app:cardElevation="0dp"
+            app:contentPadding="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/container_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_size_small"
+                    android:background="@color/black">
+
+                    <HowdyIO.PartybAUX.Views.CustomTextView
+                        android:id="@+id/textview_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/padding_large"
+                        android:gravity="center_vertical"
+                        android:text="Title"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:custom_font="@string/font_primary" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/wrapper_popup_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/container_footer"
+                    android:layout_below="@id/container_header"
+                    android:background="@drawable/background_gradient"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <FrameLayout
+                        android:id="@+id/container_content_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/wrapper_icon"
+                            android:layout_width="@dimen/item_size_large"
+                            android:layout_height="@dimen/item_size_large"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/padding_large"
+                            android:elevation="12dp"
+                            app:cardBackgroundColor="@color/black"
+                            app:cardCornerRadius="@dimen/item_size_small">
+
+                            <ImageView
+                                android:id="@+id/imageview_icon"
+                                android:layout_width="@dimen/item_size_medium"
+                                android:layout_height="@dimen/item_size_medium"
+                                android:layout_gravity="center"
+                                android:background="@drawable/baseline_cake_black_48"
+                                android:backgroundTint="@color/white"
+                                android:tint="@color/white" />
+                        </android.support.v7.widget.CardView>
+
+                        <HowdyIO.PartybAUX.Views.CustomTextView
+                            android:id="@+id/textview_sub_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/padding_large"
+                            android:text="Subheader Text:"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            app:custom_font="@string/font_primary" />
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/container_content_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <HowdyIO.PartybAUX.Views.CustomTextView
+                            android:id="@+id/textview_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/padding_medium"
+                            android:text="You trynna leave the party?"
+                            android:textSize="16sp"
+                            app:custom_font="@string/font_primary" />
+
+                        <HowdyIO.PartybAUX.Views.CustomEditText
+                            android:id="@+id/edittext_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/item_size_small"
+                            android:hint="Username"
+                            android:text=""
+                            android:textSize="16sp"
+                            android:visibility="gone"
+                            app:custom_font="@string/font_primary" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/container_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_size_small"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/padding_large"
+                        android:layout_marginStart="@dimen/padding_large"
+                        android:gravity="center_vertical">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/wrapper_button_negative"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_size_xsmall"
+                            app:cardBackgroundColor="@color/goodPurp"
+                            app:cardCornerRadius="@dimen/default_rounded_corner"
+                            app:contentPadding="1dp">
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:elevation="0dp"
+                                app:cardBackgroundColor="@color/black"
+                                app:cardCornerRadius="@dimen/default_rounded_corner"
+                                app:cardElevation="0dp"
+                                app:contentPadding="1dp" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/selector_grey_button" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical">
+
+                                <HowdyIO.PartybAUX.Views.CustomTextView
+                                    android:id="@+id/textview_negative"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/padding_medium"
+                                    android:text="No"
+                                    android:textColor="@color/white"
+                                    app:custom_font="@string/font_primary" />
+
+                                <View
+                                    android:layout_width="@dimen/padding_medium"
+                                    android:layout_height="wrap_content" />
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginEnd="@dimen/padding_small"
+                                    android:background="@drawable/baseline_close_black_18"
+                                    android:backgroundTint="@color/white" />
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/wrapper_button_positive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/item_size_xsmall"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/padding_large"
+                            app:cardBackgroundColor="@color/spotGreen"
+                            app:cardCornerRadius="@dimen/default_rounded_corner"
+                            app:contentPadding="1dp">
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:elevation="0dp"
+                                app:cardBackgroundColor="@color/black"
+                                app:cardCornerRadius="@dimen/default_rounded_corner"
+                                app:cardElevation="0dp"
+                                app:contentPadding="1dp" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/selector_grey_button" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical">
+
+                                <HowdyIO.PartybAUX.Views.CustomTextView
+                                    android:id="@+id/textview_positive"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/padding_medium"
+                                    android:text="Yes"
+                                    android:textColor="@color/white"
+                                    app:custom_font="@string/font_primary" />
+
+                                <View
+                                    android:layout_width="@dimen/padding_medium"
+                                    android:layout_height="wrap_content" />
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginEnd="@dimen/padding_small"
+                                    android:background="@drawable/baseline_check_black_18"
+                                    android:backgroundTint="@color/white" />
+                            </LinearLayout>
+
+
+                        </android.support.v7.widget.CardView>
+                    </RelativeLayout>
+
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

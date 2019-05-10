@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/button_log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/item_size_xsmall"
+        android:paddingEnd="@dimen/padding_large">
+        <HowdyIO.PartybAUX.Views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/padding_medium"
+            android:text="Log Out"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            app:custom_font="@string/font_primary"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/baseline_home_black_18"
+            android:backgroundTint="@color/textColor_first" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/item_size_medium"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/partybauxlogo"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/button_join_party"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/item_size_medium"
+            android:layout_marginStart="@dimen/padding_xxlarge"
+            android:layout_marginEnd="@dimen/padding_xxlarge"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/rounded_corner_large">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_grey_button"/>
+
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Join"
+                android:textSize="32sp"
+                font:custom_font="@string/font_primary" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/button_host_party"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/item_size_medium"
+            android:layout_marginStart="@dimen/padding_xxlarge"
+            android:layout_marginEnd="@dimen/padding_xxlarge"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/rounded_corner_large">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_grey_button"/>
+
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Host"
+                android:textSize="32sp"
+                font:custom_font="@string/font_primary" />
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <HowdyIO.PartybAUX.Views.CustomTextView
+        android:id="@+id/textview_signed_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/padding_large"
+        android:text="Username"
+        android:textSize="14sp"
+        android:textColor="@color/light_gray"
+        app:custom_font="@string/font_primary"
+        />
+
+
+</RelativeLayout>

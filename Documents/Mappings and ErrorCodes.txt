@@ -1,0 +1,15 @@
+﻿Sign Up Unique Return Values
+
+Username Taken: -2
+
+Email Taken: -1
+
+OnSuccess: 0
+
+Sign-In
+
+Incorrect Password:-1
+
+Incorrect Username:-2
+
+OnSuccess: >0

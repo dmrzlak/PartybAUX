@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="@dimen/item_size_medium"
+    android:layout_marginTop="@dimen/padding_medium"
+    android:background="@color/transparent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/padding_medium"
+        android:background="@drawable/selector_grey_button"
+        android:alpha="0.5"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/padding_medium"
+        android:layout_marginStart="@dimen/padding_medium"
+        android:layout_marginEnd="@dimen/padding_large">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/wrapper_album_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_small"
+            font:cardCornerRadius="8dp"
+            font:cardBackgroundColor="@color/background"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/imageview_album"
+                android:layout_width="@dimen/item_size_small"
+                android:layout_height="@dimen/item_size_small"
+                />
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/padding_large"
+            android:layout_marginEnd="@dimen/padding_large"
+            android:layout_toEndOf="@id/wrapper_album_image"
+            android:layout_toStartOf="@id/imageview_info_button"
+            android:gravity="center_vertical">
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:id="@+id/textview_track_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                android:textColor="@color/textColor_first"
+                font:custom_font="@string/font_primary"/>
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:id="@+id/textview_track_artists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:textColor="@color/textColor_second"
+                font:custom_font="Comfortaa-Regular.ttf"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageview_info_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/baseline_keyboard_arrow_right_black_24"
+            android:backgroundTint="@color/textColor_first"/>
+        <ImageView
+            android:id="@+id/imageview_play_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/baseline_play_arrow_black_24"
+            android:backgroundTint="@color/spotGreen"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="4px"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_alignParentBottom="true"
+        font:cardBackgroundColor="@color/white"
+        font:cardCornerRadius="2px"
+        android:alpha="0.2" />
+</RelativeLayout>

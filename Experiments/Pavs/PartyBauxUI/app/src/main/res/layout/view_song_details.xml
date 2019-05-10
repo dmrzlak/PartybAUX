@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/content_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@color/background">
+    <View
+        android:id="@+id/background_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/back_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_size_medium"
+                android:layout_alignParentEnd="true">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_large"
+                    android:background="@drawable/baseline_close_black_24"
+                    android:backgroundTint="@color/white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/padding_large"
+                android:layout_below="@id/back_button"
+                android:gravity="center_horizontal">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/wrapper_album_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_medium"
+                    android:alpha="0"
+                    font:cardCornerRadius="12dp">
+                    <ImageView
+                        android:id="@+id/imageview_album"
+                        android:layout_width="@dimen/item_size_xxlarge"
+                        android:layout_height="@dimen/item_size_xxlarge"
+                        />
+                </android.support.v7.widget.CardView>
+
+
+                <HowdyIO.PartybAUX.Views.CustomTextView
+                    android:id="@+id/textview_track_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_xxlarge"
+                    android:layout_marginEnd="@dimen/padding_large"
+                    android:layout_marginStart="@dimen/padding_large"
+                    android:text="Track Name"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textAlignment="center"
+                    font:custom_font="Comfortaa-Regular.ttf"/>
+
+                <HowdyIO.PartybAUX.Views.CustomTextView
+                    android:id="@+id/textview_track_artists"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_large"
+                    android:layout_marginEnd="@dimen/padding_xlarge"
+                    android:layout_marginStart="@dimen/padding_xlarge"
+                    android:text="Artists"
+                    android:textSize="@dimen/text_size_small"
+                    android:textAlignment="center"
+                    font:custom_font="Comfortaa-Regular.ttf"/>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/button_add_to_playlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_size_small"
+                    android:layout_marginStart="@dimen/item_size_small"
+                    android:layout_marginEnd="@dimen/item_size_small"
+                    android:layout_marginTop="@dimen/item_size_small"
+                    font:cardBackgroundColor="@color/card_background"
+                    font:cardCornerRadius="6dp">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_gradient">
+
+                    </FrameLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <HowdyIO.PartybAUX.Views.CustomTextView
+                            android:id="@+id/text_view_add_to_playlist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add to Playlist"
+                            android:textSize="18sp"
+                            android:layout_centerInParent="true"
+                            font:custom_font="Comfortaa-Regular.ttf"/>
+                        <ImageView
+                            android:id="@+id/imageanim_add_to_checkmark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginStart="@dimen/padding_medium"
+                            android:layout_toEndOf="@id/text_view_add_to_playlist"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/add_to_checkmark"
+                            android:backgroundTint="@color/textColor_first"/>
+                    </RelativeLayout>
+
+
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

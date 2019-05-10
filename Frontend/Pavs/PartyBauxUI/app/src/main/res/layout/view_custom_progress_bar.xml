@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@id/content_view"
+    android:clickable="false"
+    android:focusable="false">
+    <ImageView
+        android:id="@+id/progress_bar_container"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/item_size_xxlarge"
+        android:translationZ="2dp"
+        android:background="@drawable/play_pause_loading"/>
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="212dp"
+        android:rotation="90"
+        android:layout_centerInParent="true"
+        android:translationZ="0dp"
+        android:alpha="0.3"
+        android:background="@drawable/drop_shadow" />
+
+</RelativeLayout>

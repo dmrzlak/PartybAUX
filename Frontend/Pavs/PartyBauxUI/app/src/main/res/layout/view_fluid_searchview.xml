@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+android:id="@+id/root_layout"
+android:elevation="8dp">
+<View
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:background="@color/colorPrimary"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true">
+    <RelativeLayout
+        android:id="@+id/search_mag_wrapper"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/search_mag"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/baseline_search_black_24"
+            android:backgroundTint="@color/white"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <view class="HowdyIO.PartybAUX.Views.FluidSearchView$SearchEditText"
+        android:id="@+id/search_field"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:hint="Search"
+        android:inputType="text|textAutoComplete|textNoSuggestions"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/light_gray"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@id/search_mag_wrapper" />
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/search_close_wrapper"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentEnd="true"
+    android:visibility="gone">
+    <ImageView
+        android:id="@+id/search_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/baseline_close_black_24"
+        android:backgroundTint="@color/white" />
+</RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryDark"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dmrzlak.pbtest.MainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Playlists"
+        android:textStyle="bold"
+        android:textSize="36dp"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:padding="16dp"/>
+
+    <ListView
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/text"
+        android:clickable="true" />
+
+
+
+</RelativeLayout>

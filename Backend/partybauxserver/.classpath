@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="partybauxserver/.mvn/wrapper"/>
+	<classpathentry kind="src" path="partybauxserver/src/main/java"/>
+	<classpathentry kind="lib" path="partybauxserver/target/partybauxserver-0.2.3-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="partybauxserver/target/partybauxserver-0.2.4-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="partybauxserver/target/classes"/>
+</classpath>

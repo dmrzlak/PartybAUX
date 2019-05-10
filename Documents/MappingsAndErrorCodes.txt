@@ -1,0 +1,25 @@
+﻿CLIENT MAPPINGS
+Sign Up
+Mapping
+	BASE+signup?username=<STRING>&email=<STRING>&password<STRING>	
+
+Codes
+	Username Taken: -2
+	Email Taken: -1
+	OnSuccess: 0
+
+Sign-In
+Mapping
+	BASE+login?username=<STRING>&password<STRING>
+
+Codes
+	Incorrect Password:-1
+	Incorrect Username:-2
+	OnSuccess: >0
+
+SONG MAPPINGS
+Add Song
+Mapping
+	BASE+"addsong?partyid=<STRING>&uri=<STRING>
+
+Codes

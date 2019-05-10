@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_gradient"
+    xmlns:font="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:weightSum="5">
+
+        <RelativeLayout
+            android:id="@+id/container_title"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/item_size_small"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+            <ImageView
+                android:id="@+id/imageview_logo"
+                android:layout_width="80dp"
+                android:layout_height="64dp"
+                android:layout_alignEnd="@id/textview_title"
+                android:background="@drawable/partybauxlogo"/>
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                android:id="@+id/textview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/imageview_logo"
+                android:text="Party  bAUX"
+                android:textColor="@color/white"
+                android:textSize="52sp"
+                font:custom_font="Porcelain.otf"/>
+            <!--<pavs_309.partybauxui.Views.CustomTextView
+                android:id="@+id/textview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/imageview_logo"
+                android:text="Party bAUX"
+                android:textColor="@color/white"
+                android:textSize="38sp"
+                font:custom_font="Pecita.otf"/>-->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/padding_xlarge"
+            android:layout_marginEnd="@dimen/padding_xlarge"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:focusable="true" android:focusableInTouchMode="true">
+
+            <HowdyIO.PartybAUX.Views.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:drawableStart="@drawable/baseline_perm_contact_calendar_black_24"
+                android:drawableTint="@color/colorAccent"
+                android:drawablePadding="@dimen/padding_large"
+                font:custom_font="Comfortaa-Regular.ttf"
+                android:hint="Username"
+                android:textColorHint="@color/white"/>
+
+            <HowdyIO.PartybAUX.Views.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_xlarge"
+                android:backgroundTint="@color/colorAccent"
+                android:drawableStart="@drawable/baseline_lock_open_black_24"
+                android:drawableTint="@color/colorAccent"
+                android:drawablePadding="@dimen/padding_large"
+                font:custom_font="Comfortaa-Regular.ttf"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/white"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_size_small"
+                android:layout_marginTop="@dimen/item_size_small"
+                font:cardBackgroundColor="@color/card_background"
+                font:cardCornerRadius="6dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_gradient">
+
+                </FrameLayout>
+                <HowdyIO.PartybAUX.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Log In"
+                    android:textSize="20sp"
+                    font:custom_font="Comfortaa-Regular.ttf"/>
+
+            </android.support.v7.widget.CardView>
+
+
+            <HowdyIO.PartybAUX.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_xlarge"
+                    android:text="Sign Up"
+                    android:textSize="14sp"
+                    font:custom_font="Comfortaa-Regular.ttf"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

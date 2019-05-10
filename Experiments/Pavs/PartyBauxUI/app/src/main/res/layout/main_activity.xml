@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:isScrollContainer="false"
+    tools:context="HowdyIO.PartybAUX.Activities.MainActivity">
+    <FrameLayout
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:background="@color/colorPrimary"
+        android:translationZ="4dp" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:title=""
+        app:titleTextColor="@color/white"
+        android:visibility="visible">
+
+    </android.support.v7.widget.Toolbar>
+
+    <HowdyIO.PartybAUX.Views.CustomProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </HowdyIO.PartybAUX.Views.CustomProgressBar>
+
+    <RelativeLayout
+        android:id="@+id/module_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="false"
+        android:layout_below="@id/toolbar">
+<!--        <RelativeLayout
+            android:id="@+id/replies_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/add_contacts_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>
